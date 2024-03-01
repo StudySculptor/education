@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>StudySculptor</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h1>STUDYSCULPTOR</h1>
+            <nav>
+                <ul>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#teachers">Teachers</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+
+            <section id="hero">
+                <h2>Welcome to StudySculptor</h2>
+                <p>Welcome to StudySculptor, where education is an art form. At StudySculptor, we believe in shaping learning experiences that go beyond the ordinary. Our platform is designed to be your creative space, offering a curated selection of courses across diverse subjects. Whether you're a curious beginner or a seasoned learner, StudySculptor provides a dynamic environment where knowledge meets inspiration.</p>
+
+                <p>What sets us apart is our commitment to personalized learning. With expertly crafted courses and an interactive community, StudySculptor empowers you to sculpt your own educational journey. Break free from traditional constraints, connect with like-minded learners, and embark on a path of continuous growth.</p>
+
+                <p>Join us at StudySculptor and redefine how you learn. It's more than education; it's a masterpiece in the making.</p>
+            </section>
+
+            <section id="courses">
+                <h2>Featured Courses</h2>
+                <div class="course">
+                    <h3>Programming Mastery</h3>
+                    <p>Learn the fundamentals of programming and kickstart your journey into the world of coding. Our interactive course provides hands-on experience and expert guidance.</p>
+                    <a href="enroll_programming.html" class="btn enroll-btn" data-course="Programming">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3>Mathematics Mastery</h3>
+                    <p>Master the principles of mathematics through interactive lessons and problem-solving exercises. Our dedicated instructors ensure a comprehensive learning experience.</p>
+                    <a href="enroll_mathematics.html" class="btn enroll-btn" data-course="Mathematics">Enroll Now</a>
+                </div>
+            </section>
+
+            <section id="teachers">
+                <h2>Our Experienced Teachers</h2>
+                <div class="teacher">
+                    <h3>Ma'am Sweetzyl Pebuth Jamil</h3>
+                    <p>Ma'am Sweet brings a wealth of knowledge in programming and is dedicated to fostering a love for learning. Her expertise includes anything in programming language.</p>
+                </div>
+                <div class="teacher">
+                    <h3>Sir Ryan Jay Bernales Gumban</h3>
+                    <p>With over 5 years of experience, Sir Ryan is passionate about making learning engaging and enjoyable. He specializes in mathematics specificaly in algebra and statistics.</p>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>About StudySculptor</h2>
+                <p>StudySculptor is committed to providing high-quality education accessible to everyone. We believe in the transformative power of education and strive to create a learning environment that inspires curiosity and growth.</p>
+                <p>Our mission is to empower individuals to reach their full potential through innovative teaching methods, experienced instructors, and a diverse range of courses.</p>
+                <p>At StudySculptor, we are more than just an online learning platform – we are a community dedicated to empowering individuals through education. Founded with a passion for knowledge and a commitment to excellence, our platform connects learners with expert educators across a spectrum of subjects. Whether you're diving into the world of programming, exploring the nuances of mathematics, or unleashing your creativity through art and literature, Your Education Hub is your go-to destination. Our mission is to make quality education accessible to all, fostering a love for learning that goes beyond traditional boundaries. Join us on this journey of discovery and growth as we strive to make education a transformative and enjoyable experience for everyone.</p>
+                <p style="text-align: right;">-Jacob C. Lumbong</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Have questions or need assistance? Reach out to our team. We're here to help you on your educational journey.</p>
+                <form action="#" method="post">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.sidebar a');
+    const enrollButtons = document.querySelectorAll('.enroll-btn');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    enrollButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+        });
+    });
+});
+
+
+    </script>
+
+</body>
+</html>
